@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h2>Register</h2>
+
+<div>
+    <form method="post" style="text-align: left">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Зарегестрироваться">
+    </form>
+    <a href="{% url 'login' %}">Вернуться к Логину</a>
+    <a href="{% url 'home' %}">Вернуться на Главную</a>
+</div>
+
+
+{% endblock %}
